@@ -1,0 +1,785 @@
+/*Estilos generales*/
+@import "colores";
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    overflow-x: hidden;
+
+    height: 100%;
+    
+ 
+}
+  
+ ul{
+   list-style: none;
+ }
+
+ li{
+   list-style: none;
+ }
+
+  /*CSS INDEX*/
+ 
+// NAV
+.dropdown-toggle::after {
+  display: none;
+}
+.text-decoration-none{
+text-decoration: none!important;
+}
+
+.navbar-light .navbar-nav .nav-item {
+ position: relative; 
+}
+
+.navbar-light .navbar-nav .nav-item:after,
+.dropdown:after
+{
+content:"";
+height: 4px; 
+width: 80%;
+position: absolute;
+top:-12px;
+left:10%;
+background:#333;
+opacity:0;
+}
+
+
+.navbar-light .navbar-nav .nav-item:hover:after, .dropdown:hover:after{
+  opacity:1;
+}
+
+
+// Carrousel
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+
+/* Moficar imagen ver si usar o no */
+// .carousel-item {
+//   height: 33rem;
+// }
+// .carousel-item > img {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   min-width: 100%;
+//   max-width: 100;
+//   height: 33rem;
+// }
+
+@media only screen and (min-width: 100px) and (max-width: 700px) {
+  .carousel-caption  {
+    position: absolute;
+    top: 50px;
+  }
+  
+  .text-center h1 {
+    font-size: 25px;
+    padding-top: 65px;
+  }
+  .carousel-item > img {
+  width:400px;
+  height:330px;
+  }
+
+  .carousel-control-next-icon { 
+    display: none; 
+  }
+
+  .carousel-control-prev-icon {
+    display: none; 
+  }
+
+  }
+
+.btn {
+  font-size: 1rem;
+  border-radius: 2.5em;
+}
+
+.btn-primary {
+  background-color: #8f0005;
+  border-color: #8f0005;
+
+  &:hover, &:active {
+    color: #fff;
+    background-color: #8FBF26;
+    border-color: #8FBF26;
+  }
+}
+
+// Galeria CSS
+
+.no-gutters>.col, .no-gutters>[class*=col-] {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.gallery-block{
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.gallery-block .heading{
+    margin-bottom: 50px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.gallery-block .heading h2{
+    font-weight: 800;
+    // font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.gallery-block.compact-gallery .item{
+  overflow: hidden;
+  margin-bottom: 0;
+  opacity: 1;
+}
+
+.gallery-block.compact-gallery .item .image{
+  transition: 0.8s ease;
+}
+
+.gallery-block.compact-gallery .item .info{
+  position: relative;
+    display: inline-block;
+}
+
+.gallery-block.compact-gallery .item .description{
+  display: grid;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    padding: 10px;
+    font-size: 17px;
+    line-height: 18px;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    opacity: 1;
+    color: #fff;
+    transition: 0.8s ease;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.39));
+}
+
+.gallery-block.compact-gallery .item .description .description-heading{
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.gallery-block.compact-gallery .item .description .description-body{
+  font-size: 0.8em;
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+@media (min-width: 576px) {
+
+  .gallery-block.compact-gallery .item .description {
+    opacity: 0; 
+  }
+
+  .gallery-block.compact-gallery .item a:hover .description {
+    opacity: 1; 
+  } 
+
+  .gallery-block .zoom-on-hover:hover .image {
+    transform: scale(1.3);
+    opacity: 0.7; 
+  }
+}
+
+@media only screen and (min-width: 100px) and (max-width: 540px){
+  .menu-one {
+    content:url("/img/entradaxs.jpg");
+    }
+  
+    .menu-two {
+      content:url("/img/sandwichxs.jpg");
+      }
+
+      .menu-three {
+        content:url("/img/principalxs.jpg");
+        }
+
+        .menu-four {
+          content:url("/img/postrexs.jpg");
+          }
+
+          .description {
+            width: 97% !important;
+            left: auto !important;
+            right: auto !important;
+          }
+}
+
+
+// mapa
+
+.titleStyle {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 2em;
+  padding: 20px;
+}
+
+.map-responsive{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+}
+.map-responsive iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 540px){
+ h2{
+   font-size: 20px;
+ }
+ .titleStyle {
+   font-size: 20px;
+ }
+}
+
+// Contacto
+form {
+  max-width: 420px;
+  margin: 10px auto;
+}
+
+.feedback-input {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  border: 2px solid rgb(28, 38, 36);
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 90%;
+  box-sizing: border-box;
+  outline: 0;
+
+  &:focus {
+    border: 2px solid rgb(28, 38, 36);
+  }
+}
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+[type="submit"] {
+  font-family: "Raleway", sans-serif;
+  width: 90%;
+  background: rgb(28, 38, 36);
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+
+  &:hover {
+    background: #8f0005;
+  }
+}
+
+@media only screen and (min-width: 100px) and (max-width: 540px){
+  .feedback-input {
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    border-radius: 5px;
+    line-height: 18px;
+    border: 2px solid rgb(28, 38, 36);
+    transition: all 0.3s;
+    padding: 9px;
+    margin-bottom: 10px;
+    width: 90%;
+    box-sizing: border-box;
+    outline: 0;
+  
+    &:focus {
+      border: 2px solid rgb(28, 38, 36);
+    }
+  }
+
+  textarea {
+    height: 120px;
+    line-height: 100%;
+    resize: vertical;
+  }
+
+  [type="submit"] {
+    font-family: "Raleway", sans-serif;
+    width: 90%;
+    background: rgb(28, 38, 36);
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    transition: all 0.3s;
+    margin-top: -4px;
+    font-weight: 700;
+  
+    &:hover {
+      background: #8f0005;
+    }
+  }
+
+ }
+
+//  Faq
+.subtitleFaq {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.textFaq {
+font-size: 14PX;
+}
+
+
+//  Footer
+ 
+.site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+
+
+// whatsapp
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:80px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}
+
+@media (max-width:767px)
+{
+  .float{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:150px;
+    right:10px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index:100;
+  }
+}
+
+ /*CSS Menu*/
+
+ .uppercaseTitle {
+   padding-top: 20PX;
+ }
+
+ .btn {
+  font-weight: 600;
+}
+
+.btn__description {
+  font-weight: 400;
+}
+
+.btn__text {
+  padding: 0 10px;
+}
+
+.btn__icon {
+align-items: center;
+}
+
+.menuTitle {
+font-weight: 600;
+margin-top: -60px;
+
+}
+
+.image-ico {
+max-width: 25px;
+max-height: 20px;
+}
+
+.pb0 {
+  padding-bottom: 0;
+}
+
+.uppercase {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+h5.uppercase {
+  letter-spacing: 2px;
+  margin-right: -2px;
+  margin-top: 40px;
+}
+
+.mb0 {
+  margin-bottom: 0 !important;
+}
+.mb4 {
+  margin-bottom: 4px;
+}
+
+
+@media (max-width:767px)
+{
+  .img-fluid{
+    margin-top: 40px !important;
+  }
+
+  .menuTitle{
+    margin-top: -30px;
+    font-size: 20px;
+  }
+}
+
+
+  /*CSS MANIFIESTO*/
+  .bigtitle {
+    font-size:75px !important;
+    line-height:95px !important;
+    font-weight: 800;
+    margin-top: 50px;
+  }
+
+
+  @media (max-width:767px)
+{
+  .bigtitle {
+    font-size:30px !important;
+    font-weight: 800;
+    line-height: 30px !important;
+    margin-top: 0;
+  }
+
+  .valores {
+    margin-top: -80px !important;
+  }
+}
+  .valores {
+    // position: absolute;
+    margin-top: -350px;
+  }
+
+  .boxman {
+    margin-top: 50px !important;
+  }
+
+ 
+  /*CSS INGRESAR*/
+  .main-head{
+    height: 150px;
+    background: #FFF;
+   
+}
+
+.sidenav {
+    height: 100%;
+    background-color: $brand-primary;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+
+.main {
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+}
+
+@media screen and (max-width: 450px) {
+    .login-form{
+        margin-top: 10%;
+    }
+
+    .register-form{
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .main{
+        margin-left: 40%; 
+    }
+
+    .sidenav{
+        width: 40%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+
+    .login-form{
+        margin-top: 80%;
+    }
+
+    .register-form{
+        margin-top: 20%;
+    }
+}
+
+
+.login-main-text{
+    margin-top: 20%;
+    padding: 60px;
+    color: #fff;
+}
+
+.login-main-text h2{
+    font-weight: 300;
+}
+
+.btn-black{
+    background-color: #000 !important;
+    color: #fff;
+}
+ 
+.btn-ingresar {
+  width: 30% !important;
+  font-size: 15px !important;
+}
+  
+  /*CSS FOTOS*/
+  .galeriaTitle {
+    font-weight: 800;
+}
+
+.gallery-block.grid-gallery{
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+.gallery-block.grid-gallery .heading{
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.gallery-block.grid-gallery .heading h2{
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.gallery-block.grid-gallery a:hover{
+  opacity: 0.8;
+}
+
+.gallery-block.grid-gallery .item img{
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+  transition: 0.4s;
+}
+
+.gallery-block.grid-gallery .item{
+  margin-bottom: 20px;
+}
+
+@media (min-width: 576px) {
+
+  .gallery-block.grid-gallery .scale-on-hover:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important;
+  }
+}
+ 
+  
+  /*CSS CARRITO*/
+  .carritoTitle{
+    margin-top: 450px !important;
+    padding-top: 450px !important;
+  }
